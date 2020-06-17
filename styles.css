@@ -1,19 +1,44 @@
 :root {
-
+  --header-height: 40px;
+  --nav-height: 30px;
+  --dark-grey: #213044;
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
+  margin: 0;
+  color: var(--dark-grey);
 }
 
 header {
-  background-color: red;
+  background-color: salmon;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 1.5em;
 }
 
 nav {
-  background-color: blue;
+  background-color: whitesmoke;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
 }
 
 main {
-  background-color: yellow;
+  margin: calc(var(--header-height) + var(--nav-height) + 30px) auto 30px auto;
+  width: 720px;
+} @media screen and (max-width: 720px) {
+  main {
+    width: 100%;
+  }
 }

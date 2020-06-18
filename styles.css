@@ -3,6 +3,7 @@
   --header-height: 40px;
   --nav-height: 30px;
   --dark-grey: #213044;
+  --dark-green: #42615A;
   scroll-behavior: smooth;
 }
 
@@ -29,18 +30,25 @@ header {
   right: 0;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 15px;
   height: var(--header-height);
   background-color: salmon;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
-h1 {
-  flex-grow: 2;
+header a {
   color: white;
-  font-size: 1.5em;
+  text-decoration: none;
 }
 
-header .action-button {
+header h1 {
+  flex-grow: 2;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+header .header-action-button {
   -webkit-appearance: none;
   border: none;
   background: none;
@@ -55,7 +63,51 @@ nav {
   top: var(--header-height);
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: var(--nav-height);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+nav a {
+  color: var(--dark-grey);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--dark-green);
+}
+
+nav a .material-icons {
+  margin-right: 5px;
+  font-size: 20px;
+} @media screen and (max-width: 850px) {
+  nav a .material-icons {
+    display: none;
+  }
+} @media screen and (max-width: 700px) {
+  nav a .material-icons {
+    display: initial;
+  }
+}
+
+nav a .nav-label {
+  vertical-align: middle;
+} @media screen and (max-width: 850px) {
+  nav a .nav-label {
+    display: initial;
+  }
+} @media screen and (max-width: 700px) {
+  nav a .nav-label {
+    display: none;
+  }
+}
+
+nav .nav-vertical-line {
+  height: 20px;
+  border-left: 1px solid rgba(0,0,0,0.1);
 }
 
 /* Main content */

@@ -27,6 +27,30 @@ h1:first-child, h2:first-child {
   vertical-align: middle;
 }
 
+a {
+  color: var(--dark-green);
+}
+
+a[href^=mailto]::after {
+  content: "mail";
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: 'Material Icons';
+  font-style: normal;
+  color: black;
+}
+
+a[href^=tel]::after {
+  content: "local_phone";
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: 'Material Icons';
+  font-style: normal;
+  color: black;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -148,6 +172,7 @@ main {
   }
 }
 
+/* Main image */
 main .main-image-card {
   margin: 20px auto;
   max-width: 250px;
@@ -158,4 +183,10 @@ main .main-image-card img {
   border: 2px solid whitesmoke;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+}
+
+/* Main personal details */
+main .main-personal-details-container address ul {
+  padding-inline-start: 0;
+  list-style-type: none;
 }

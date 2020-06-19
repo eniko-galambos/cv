@@ -4,6 +4,8 @@
   --nav-height: 30px;
   --dark-grey: #213044;
   --dark-green: #42615A;
+  --border-radius: 3px;
+  --box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   scroll-behavior: smooth;
 }
 
@@ -33,7 +35,7 @@ header {
   padding: 0 15px;
   height: var(--header-height);
   background-color: salmon;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  box-shadow: var(--box-shadow);
   z-index: 10;
 }
 
@@ -67,7 +69,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: var(--nav-height);
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  box-shadow: var(--box-shadow);
 }
 
 nav a {
@@ -119,4 +121,16 @@ main {
   main {
     width: auto;
   }
+}
+
+main .main-image-card {
+  margin: 20px auto;
+  max-width: 250px;
+}
+
+main .main-image-card img {
+  max-width: 100%;
+  border: 2px solid whitesmoke;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }

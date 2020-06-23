@@ -51,6 +51,35 @@ a[href^=tel]::after {
   color: black;
 }
 
+em {
+  font-weight: 600;
+}
+
+.timeline li {
+  position: relative;
+}
+
+.timeline li:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--dark-green);
+  position: absolute;
+  left: -25px;
+  top: 16px;
+}
+
+.timeline li:not(:last-child):after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: var(--dark-green);
+  position: absolute;
+  left: -18px;
+  top: 25px;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -63,7 +92,7 @@ header {
   height: var(--header-height);
   background-color: var(--dark-salmon);
   box-shadow: var(--box-shadow);
-  z-index: 10;
+  z-index: 10000;
 }
 
 header a {
@@ -97,6 +126,7 @@ nav {
   align-items: center;
   height: var(--nav-height);
   box-shadow: var(--box-shadow);
+  z-index: 10000;
 }
 
 nav a {
@@ -162,6 +192,9 @@ nav .nav-vertical-line {
 
 /* Main content */
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: calc(var(--header-height) + var(--nav-height) + 30px) auto 20px auto;
   padding: 0 10px;
   width: 720px;
@@ -185,8 +218,25 @@ main .main-image-card img {
   box-shadow: var(--box-shadow);
 }
 
+main .main-card {
+  margin-bottom: 5px;
+  padding: 15px;
+  background-color: whitesmoke;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
 /* Main personal details */
 main .main-personal-details-container address ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+main .main-who-am-i-container ul {
+  padding-inline-start: 15px;
+}
+
+main .main-work-container ul {
   padding-inline-start: 0;
   list-style-type: none;
 }

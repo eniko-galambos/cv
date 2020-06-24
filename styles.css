@@ -23,7 +23,7 @@ h1:first-child, h2:first-child {
   margin: 0;
 }
 
-.material-icons {
+.material-icons-outlined {
   vertical-align: middle;
 }
 
@@ -40,7 +40,7 @@ a[href^=mailto]::after {
   display: inline-block;
   margin-left: 5px;
   vertical-align: middle;
-  font-family: 'Material Icons';
+  font-family: 'Material Icons Outlined';
   font-style: normal;
   color: black;
 }
@@ -50,7 +50,7 @@ a[href^=tel]::after {
   display: inline-block;
   margin-left: 5px;
   vertical-align: middle;
-  font-family: 'Material Icons';
+  font-family: 'Material Icons Outlined';
   font-style: normal;
   color: black;
 }
@@ -120,17 +120,22 @@ header .header-action-button {
 
 /* Navigation bar */
 nav {
-  background-color: whitesmoke;
   position: fixed;
   top: var(--header-height);
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  padding-left: 15px;
   height: var(--nav-height);
+  background-color: whitesmoke;
   box-shadow: var(--box-shadow);
   z-index: 10000;
+} @media screen and (max-width: 880px) {
+  nav {
+    justify-content: space-evenly;
+    padding-left: 0;
+  }
 }
 
 nav a {
@@ -143,34 +148,35 @@ nav a:hover {
   color: var(--dark-green);
 }
 
-nav a .material-icons {
+nav a .material-icons-outlined {
   margin-right: 5px;
   font-size: 20px;
-} @media screen and (max-width: 850px) {
-  nav a .material-icons {
+} @media screen and (max-width: 1050px) {
+  nav a .material-icons-outlined {
     display: none;
   }
-} @media screen and (max-width: 700px) {
-  nav a .material-icons {
+} @media screen and (max-width: 880px) {
+  nav a .material-icons-outlined {
     display: initial;
   }
 }
 
 nav a .nav-label {
   vertical-align: middle;
-} @media screen and (max-width: 850px) {
-  nav a .nav-label {
-    display: initial;
-  }
-} @media screen and (max-width: 700px) {
+} @media screen and (max-width: 880px) {
   nav a .nav-label {
     display: none;
   }
 }
 
 nav .nav-vertical-line {
+  margin: 0 15px;
   height: 20px;
   border-left: 1px solid rgba(0,0,0,0.1);
+} @media screen and (max-width: 1170px) {
+  nav .nav-vertical-line {
+    margin: 0 5px;
+  }
 }
 
 /* Upper decoration */
@@ -246,4 +252,8 @@ main .main-work-container ul {
 
 main .main-education-container ul {
   list-style-type: none;
+}
+
+main .main-technical-knowledge-container ul {
+  padding-inline-start: 15px;
 }

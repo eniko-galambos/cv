@@ -231,7 +231,7 @@ main .main-image-card img {
 main .main-card {
   margin-bottom: 5px;
   padding: 15px;
-  background-color: whitesmoke;
+  background: linear-gradient(white, white 60%, whitesmoke 120%);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
@@ -256,4 +256,8 @@ main .main-education-container ul {
 
 main .main-technical-knowledge-container ul {
   padding-inline-start: 15px;
+}
+
+main .main-other-qualifications-container ul {
+  padding-inline-start: 15px;  
 }

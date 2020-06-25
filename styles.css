@@ -205,7 +205,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: calc(var(--header-height) + var(--nav-height) + 30px) auto 20px auto;
+  margin: calc(var(--header-height) + var(--nav-height) + 20px) auto 20px auto;
   padding: 0 10px;
   width: 720px;
   z-index: 20;
@@ -226,6 +226,7 @@ main .main-image-card img {
   border: 2px solid whitesmoke;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  box-sizing: border-box;
 }
 
 main .main-card {
@@ -254,10 +255,48 @@ main .main-education-container ul {
   list-style-type: none;
 }
 
+main .main-technical-knowledge-container {
+  display: flex;
+} @media screen and (max-width: 600px) {
+  main .main-technical-knowledge-container {
+    flex-direction: column;
+  }
+}
+main .main-technical-knowledge-container > div:not(:first-child) {
+  margin-left: 30px;
+}
 main .main-technical-knowledge-container ul {
   padding-inline-start: 15px;
 }
 
 main .main-other-qualifications-container ul {
   padding-inline-start: 15px;  
+}
+
+main .main-hobbies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+main .main-hobbies-container .main-image-card {
+  flex-basis: 120px;
+  position: relative;
+  margin: 0 0 15px 0;
+  cursor: pointer;
+}
+main .main-hobbies-container .main-image-card:not(:first-child) {
+  margin-left: 15px;
+}
+main .main-hobbies-container .main-image-card figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(2px);
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.4);
+  color: var(--dark-green);
+  font-size: 0.9em;
 }

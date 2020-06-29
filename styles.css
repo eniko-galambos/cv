@@ -202,9 +202,6 @@ nav .nav-vertical-line {
 
 /* Main content */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: calc(var(--header-height) + var(--nav-height) + 20px) auto 20px auto;
   padding: 0 10px;
   width: 720px;
@@ -215,7 +212,15 @@ main {
   }
 }
 
-/* Main image */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  background-color: rgba(245,245,245,0.3);
+  border-radius: var(--border-radius);
+}
+
 main .main-image-card {
   margin: 20px auto;
   max-width: 250px;
@@ -237,7 +242,6 @@ main .main-card {
   box-shadow: var(--box-shadow);
 }
 
-/* Main personal details */
 main .main-personal-details-container address ul {
   padding-inline-start: 0;
   list-style-type: none;
@@ -264,6 +268,10 @@ main .main-technical-knowledge-container {
 }
 main .main-technical-knowledge-container > div:not(:first-child) {
   margin-left: 30px;
+} @media screen and (max-width: 600px) {
+  main .main-technical-knowledge-container > div:not(:first-child) {
+    margin-left: 0;
+  }
 }
 main .main-technical-knowledge-container ul {
   padding-inline-start: 15px;
@@ -282,11 +290,8 @@ main .main-hobbies-container {
 main .main-hobbies-container .main-image-card {
   flex-basis: 120px;
   position: relative;
-  margin: 0 0 15px 0;
+  margin: 0 8px 15px 8px;
   cursor: pointer;
-}
-main .main-hobbies-container .main-image-card:not(:first-child) {
-  margin-left: 15px;
 }
 main .main-hobbies-container .main-image-card figcaption {
   position: absolute;
@@ -296,7 +301,9 @@ main .main-hobbies-container .main-image-card figcaption {
   transform: translateY(2px);
   width: 100%;
   text-align: center;
-  background-color: rgba(255,255,255,0.4);
-  color: var(--dark-green);
-  font-size: 0.9em;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  line-height: 35px;
+  font-size: 1.1em;
+  font-weight: 400;
 }

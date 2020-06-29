@@ -237,9 +237,14 @@ main .main-image-card img {
 main .main-card {
   margin-bottom: 5px;
   padding: 15px;
+  width: 400px;
   background: linear-gradient(white, white 60%, whitesmoke 120%);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+} @media screen and (max-width: 500px) {
+  main .main-card {
+    width: 90%;
+  }
 }
 
 main .main-personal-details-container address ul {
@@ -259,20 +264,6 @@ main .main-education-container ul {
   list-style-type: none;
 }
 
-main .main-technical-knowledge-container {
-  display: flex;
-} @media screen and (max-width: 600px) {
-  main .main-technical-knowledge-container {
-    flex-direction: column;
-  }
-}
-main .main-technical-knowledge-container > div:not(:first-child) {
-  margin-left: 30px;
-} @media screen and (max-width: 600px) {
-  main .main-technical-knowledge-container > div:not(:first-child) {
-    margin-left: 0;
-  }
-}
 main .main-technical-knowledge-container ul {
   padding-inline-start: 15px;
 }

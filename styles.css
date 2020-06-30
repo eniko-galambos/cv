@@ -84,6 +84,20 @@ em {
   top: 25px;
 }
 
+.shaking {
+  animation: shake 0.3s linear 0.5s;
+}
+
+.up {
+  display: block;
+  animation: flip 0.3s ease forwards;
+}
+
+.down {
+  display: none;
+  animation: flip 0.3s ease forwards;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -261,9 +275,6 @@ main .main-card-flippable .main-card-handle {
   transform: rotate3d(1, 1, 0, 30deg) translate(3px, 3px);
   cursor: pointer;
 }
-main .main-card-flippable:hover {
-  animation: shake 0.3s linear 0.5s;
-}
 
 main .main-personal-details-container address ul {
   padding-inline-start: 0;
@@ -329,5 +340,17 @@ main .main-hobbies-container .main-image-card figcaption {
   75% {
     transform: rotate(0.5deg);
     transform-origin: bottom right;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(180deg) scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: rotateX(0deg) scale(1);
   }
 }

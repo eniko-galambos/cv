@@ -85,7 +85,7 @@ em {
 }
 
 .shaking {
-  animation: shake 0.3s linear 0.5s;
+  animation: shake 0.3s linear 0.8s;
 }
 
 .up {
@@ -312,21 +312,6 @@ main .main-hobbies-container .main-image-card {
   flex-basis: 120px;
   position: relative;
   margin: 0 8px 15px 8px;
-  cursor: pointer;
-}
-main .main-hobbies-container .main-image-card figcaption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(2px);
-  width: 100%;
-  text-align: center;
-  background-color: rgba(255,255,255,0.2);
-  color: white;
-  line-height: 35px;
-  font-size: 1.1em;
-  font-weight: 400;
 }
 
 @keyframes shake {

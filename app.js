@@ -1,7 +1,12 @@
+const languages = new Set(["en", "hu"]);
+
 window.addEventListener("load", function pageLoad() {
   let elementsWithLabels = Array.from(document.querySelectorAll("[data-label]"));
 
-  fetch("hu/labels.json")
+  let browserLanguage = (navigator.language || navigator.userLanguage).slice(0,2);
+  let language = languages.has(browserLanguage) ? browserLanguage : "en";
+
+  fetch(`labels-${language}.json`)
     .then(function labelsFetched(result) {
       return result.json();
     })

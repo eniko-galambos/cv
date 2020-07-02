@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Galambos Enikő</title>
+  <title data-label="title">...</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
   <link rel="stylesheet" href="styles.css">
@@ -11,24 +11,24 @@
 </head>
 <body>
   <header>
-    <h1><a href="#">Önéletrajz</a></h1>
-    <button class="header-action-button" type="button" title="View in English">ENG</button>
+    <h1><a href="#" data-label="cv">...</a></h1>
+    <button class="header-action-button" type="button" title="View in English" data-label="languageToggle">...</button>
     <button class="header-action-button" type="button" title="Download"><i class="material-icons-outlined">get_app</i></button>
   </header>
   <nav>
-    <a href="#personal-details"><i class="material-icons-outlined">person</i><span class="nav-label">Személyes adatok</span></a>
+    <a href="#personal-details"><i class="material-icons-outlined">person</i><span class="nav-label" data-label="personalDetails">...</span></a>
     <div class="nav-vertical-line"></div>
-    <a href="#who-am-i"><i class="material-icons-outlined">contact_support</i><span class="nav-label">Ki vagyok én?</span></a>
+    <a href="#who-am-i"><i class="material-icons-outlined">contact_support</i><span class="nav-label" data-label="whoAmI">...</span></a>
     <div class="nav-vertical-line"></div>
-    <a href="#work"><i class="material-icons-outlined">work_outline</i><span class="nav-label">Munkahelyek</span></a>
+    <a href="#work"><i class="material-icons-outlined">work_outline</i><span class="nav-label" data-label="workplaces">...</span></a>
     <div class="nav-vertical-line"></div>
-    <a href="#education"><i class="material-icons-outlined">school</i><span class="nav-label">Tanulmányok</span></a>
+    <a href="#education"><i class="material-icons-outlined">school</i><span class="nav-label" data-label="education">...</span></a>
     <div class="nav-vertical-line"></div>
-    <a href="#technical-knowledge"><i class="material-icons-outlined">computer</i><span class="nav-label">Technológiai ismeretek</span></a>
+    <a href="#technical-knowledge"><i class="material-icons-outlined">computer</i><span class="nav-label" data-label="technicalKnowledge">...</span></a>
     <div class="nav-vertical-line"></div>
-    <a href="#other-qualifications"><i class="material-icons-outlined">history_edu</i><span class="nav-label">Egyéb végzettségek</span></a>
+    <a href="#other-qualifications"><i class="material-icons-outlined">history_edu</i><span class="nav-label" data-label="otherQualifications">...</span></a>
     <div class="nav-vertical-line"></div>
-    <a href="#hobbies"><i class="material-icons-outlined">color_lens</i><span class="nav-label">Hobbik</span></a>
+    <a href="#hobbies"><i class="material-icons-outlined">color_lens</i><span class="nav-label" data-label="hobbies">...</span></a>
   </nav>
   <div class="page-upper-decor">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 300">
@@ -38,42 +38,42 @@
   </div>
   <main>
     <div class="main-image-card">
-      <img src="portrait.jpg" alt="A portrait of me.">
+      <img src="resources/portrait.jpg" alt="A portrait of me.">
     </div>
     <article>
-      <h2>Galambos Enikő</h1>
+      <h2 data-label="name">...</h1>
       <section id="personal-details">
-        <h3>Személyes adatok</h3>
+        <h3 data-label="personalDetails">...</h3>
         <div class="main-personal-details-container">
           <address class="main-card">
             <ul>
-              <li>Név: Galambos Enikő</li>
-              <li>Születési hely, idő: Kalocsa, 1993. 03. 30.</li>
-              <li>Lakcím: 1064, Budapest, Szondi utca 51./A, 2/227</li>
-              <li>Mobil: <a href="tel:+36209555939">+36 20 955 5939</a></li>
-              <li>E-mail: <a href="mailto:galamboseniko93@gmail.com">galamboseniko93@gmail.com</a></li>
+              <li data-label="nameWithLabel">...</li>
+              <li data-label="birthPlaceDate">...</li>
+              <li data-label="address">...</li>
+              <li><span data-label="mobile">...</span>: <a href="tel:+36209555939">+36 20 955 5939</a></li>
+              <li><span data-label="email">...</span>: <a href="mailto:galamboseniko93@gmail.com">galamboseniko93@gmail.com</a></li>
             </ul>
           </address>
         </div>
       </section>
       <section id="who-am-i">
-        <h3>Ki vagyok én?</h3>
+        <h3 data-label="whoAmI">...</h3>
         <div class="main-who-am-i-container">
           <div class="main-card-container">
             <div class="main-card main-card-flippable up">
               <ul>
-                <li>Mindig pozitív, aki a nehézségekre kihívásként tekint</li>
-                <li>Kíváncsi, aki mindig mindent érteni akar</li>
-                <li>Örökösen tanulni vágyó, aki a folytonos fejlődésre törekszik</li>
-                <li>Lelkes és kreatív gondolkodó</li>
+                <li data-label="positive">...</li>
+                <li data-label="curious">...</li>
+                <li data-label="learning">...</li>
+                <li data-label="creative">...</li>
               </ul>
               <div class="main-card-handle"></div>
             </div>
             <div class="main-card main-card-flippable down">
               <ul>
-                <li>Nem szeretem az előítéleteket</li>
-                <li>Nem szeretek sietni, igyekszem jól beosztani az időmet</li>
-                <li>Nem szeretem a meglepetéseket, amire lehet arra felkészülök előre</li>
+                <li data-label="biases">...</li>
+                <li data-label="hurry">...</li>
+                <li data-label="surprises">...</li>
               </ul>
               <div class="main-card-handle"></div>
             </div>
@@ -81,20 +81,20 @@
         </div>
       </section>
       <section id="work">
-        <h3>Munkahelyek</h3>
+        <h3 data-label="workplaces">...</h3>
         <div class="main-work-container">
           <ul class="timeline">
             <li>
               <div class="main-card-container">
                 <div class="main-card main-card-flippable up">
-                  <em>2019. November - 2020. Március</em><br>
-                  Chess Budapest, Budapest<br>
-                  Reggeliztető szakács<br>
+                  <em data-label="nov2019mar2020">...</em><br>
+                  <span data-label="chess">...</span><br>
+                  <span data-label="chef">...</span><br>
                   <div class="main-card-handle"></div>
                 </div>
                 <div class="main-card main-card-flippable down">
                   <small>
-                    <q>Azért választottam az eredeti szakmámtól eltérő munkakört, mert nagyon szerettem volna kipróbálni hogy hogyan teljesítek az élet más területén, ha ismeretlen kihívásokkal szembesülök.</q>
+                    <q data-label="chessDesc">...</q>
                   </small>
                   <div class="main-card-handle"></div>
                 </div>
@@ -103,14 +103,14 @@
             <li>
               <div class="main-card-container">
                 <div class="main-card main-card-flippable up">
-                  <em>2017. Február - 2019. Október</em><br>
-                  Schibsted/Adevinta CMH, Budapest<br>
-                  Frontend webfejlesztő
+                  <em data-label="feb2017oct2019">...</em><br>
+                  <span data-label="adevinta">...</span><br>
+                  <span data-label="feDeveloper">...</span>
                   <div class="main-card-handle"></div>
                 </div>
                 <div class="main-card main-card-flippable down">
                   <small>
-                    <q>A legjelentősebb dolog amit itt megtanultam az a kommunikáció fontossága. Sokat dolgoztam külföldi kollégákkal is, ezért aktív angol nyelvtudásra is szert tettem. Emellett számos technológiával dolgoztam rövidebb-hosszabb ideig, mint a React, AngularJS, Wordpress, SASS, Bootstrap, Docker.</q>
+                    <q data-label="adevintaDesc">...</q>
                   </small>
                   <div class="main-card-handle"></div>
                 </div>
@@ -119,14 +119,14 @@
             <li>
               <div class="main-card-container">
                 <div class="main-card main-card-flippable up">
-                  <em>2015. Augusztus - 2016. November</em><br>
-                  Aensys Kft., Szeged<br>
-                  Full-stack szoftverfejlesztő
+                  <em data-label="aug2015nov2016">...</em><br>
+                  <span data-label="aensys">...</span><br>
+                  <span data-label="fsDeveloper">...</span>
                   <div class="main-card-handle"></div>
                 </div>
                 <div class="main-card main-card-flippable down">
                   <small>
-                    <q>Lehetőségem volt kipróbálni magam különböző technológiában, többek között Android mobilfejlesztésben, Java backendben, adatbázis technológiákban, AngularJS-ben. Itt tanultam meg hogy könnyen átlássak és elboldoguljak számomra korábban ismeretlen rendszerekben és technológiákban.</q>
+                    <q data-label="aensysDesc">...</q>
                   </small>
                   <div class="main-card-handle"></div>
                 </div>
@@ -135,14 +135,14 @@
             <li>
               <div class="main-card-container">
                 <div class="main-card main-card-flippable up">
-                  <em>2014. Július - 2015. Augusztus</em><br>
-                  Szegedi Tudományegyetem, Szoftverfejlesztés Tanszék<br>
-                  Full-stack szoftverfejlesztő
+                  <em data-label="jul2014aug2015">...</em><br>
+                  <span data-label="szteSoftware">...</span><br>
+                  <span data-label="fsDeveloper">...</span>
                   <div class="main-card-handle"></div>
                 </div>
                 <div class="main-card main-card-flippable down">
                   <small>
-                    <q>Megtanultam az önálló munkavégzést, de emellett azt is, hogy mennyire fontos, hogy tudni kell segítséget kérni.</q>
+                    <q data-label="szteSoftwareDesc">...</q>
                   </small>
                   <div class="main-card-handle"></div>
                 </div>
@@ -157,56 +157,56 @@
           <ul class="timeline">
             <li>
               <div class="main-card">
-                <em>2015 – 2017</em><br>
-                Szegedi Tudományegyetem, Természettudományi és Informatikai Kar<br>
-                Gazdaságinformatikus MSc
+                <em data-label="2015-2017">...</em><br>
+                <span data-label="szteTtik">...</span><br>
+                <span data-label="bieMsc">...</span>
               </div>
             </li>
             <li>
               <div class="main-card">
-                <em>2011 – 2015</em><br>
-                Szegedi Tudományegyetem, Természettudományi és Informatikai Kar<br>
-                Gazdaságinformatikus BSc
+                <em data-label="2011-2015">...</em><br>
+                <span data-label="szteTtik">...</span><br>
+                <span data-label="bieBsc">...</span>
               </div>
             </li>
             <li>
               <div class="main-card">
-                <em>2007 – 2011</em><br>
-                Szent István Gimnázium, Kalocsa<br>
-                Nyelvi tagozat
+                <em data-label="2007-2011">...</em><br>
+                <span data-label="szig">...</span><br>
+                <span data-label="languageClass">...</span>
               </div>
             </li>
           </ul>
         </div>
       </section>
       <section id="technical-knowledge">
-        <h3>Technológiai ismeretek</h3>
+        <h3 data-label="technicalKnowledge">...</h3>
         <div class="main-technical-knowledge-container">
-          <h4>Főbb ismeretek</h4>
+          <h4 data-label="mainKnowledge">...</h4>
           <div class="main-card">
             <ul>
-              <li><em>HTML5</em>, <em>JavaScript</em>, <em>CSS</em></li>
-              <li><em>JavaScript keretrendszer:</em> AngularJS, React</li>
-              <li><em>Stílus:</em> SCSS, Bootstrap</li>
-              <li><em>Eszközök:</em> Jira, Confluence, Git</li>
-              <li><em>Egyéb:</em> Docker</li>
+              <li><em data-label="html5">...</em>, <em data-label="js">...</em>, <em data-label="css">...</em></li>
+              <li><em data-label="jsFramework"></em>: <span data-label="knownJsFrameworks">...</span></li>
+              <li><em data-label="style">...</em>: <span data-label="knownStyles">...</span></li>
+              <li><em data-label="tools">...</em>: <span data-label="knownTools">...</span></li>
+              <li><em data-label="other">...</em>: <span data-label="knownOther">...</span></li>
             </ul>
           </div>
-          <h4>Ezekkel is dolgoztam már</h4>
+          <h4 data-label="alsoWorkedWith">...</h4>
           <div class="main-card-container">
             <div class="main-card main-card-flippable up">
               <ul>
-                <li>Android, Java backend, SQL</li>
-                <li>Travis</li>
-                <li>Typescript, Material UI</li>
-                <li>Wordpress</li>
-                <li>Tesztek: Jest, Enzyme</li>
+                <li data-label="java">...</li>
+                <li data-label="travis">...</li>
+                <li data-label="typescript">...</li>
+                <li data-label="wordpress">...</li>
+                <li data-label="tests">...</li>
               </ul>
               <div class="main-card-handle"></div>
             </div>
             <div class="main-card main-card-flippable down">
               <small>
-                <q>Habár ezekből a technológiákből felületes a tudásom vagy már megkopott, de fontosnak tartottam felsorolni, mivel azt mutatja, hogy nem ijednék meg ha ilyen jellegű feladatokkal kellene megbirkóznom.</q>
+                <q data-label="alsoWorkedWithDesc">...</q>
               </small>
               <div class="main-card-handle"></div>
             </div>
@@ -214,20 +214,20 @@
         </div>
       </section>
       <section id="other-qualifications">
-        <h3>Egyéb végzettségek</h3>
+        <h3 data-label="otherQualifications">...</h3>
         <div class="main-other-qualifications-container">
           <div class="main-card-container">
             <div class="main-card main-card-flippable up">
               <ul>
-                <li>Angol középfokú nyelvvizsga (TELC)</li>
-                <li>B kategóriás jogosítvány</li>
-                <li>Szakács OKJ</li>
+                <li data-label="englishExam">...</li>
+                <li data-label="drivingLicense">...</li>
+                <li data-label="chefExam">...</li>
               </ul>
               <div class="main-card-handle"></div>
             </div>
             <div class="main-card main-card-flippable down">
               <small>
-                <q>Az angol tudásomat korábbi munkahelyemen aktívan használtam is, illetve jelenleg is folyamatosan fejlesztem és szinten tartom magam.</q>
+                <q data-label="otherQualificationsDesc">...</q>
               </small>
               <div class="main-card-handle"></div>
             </div>
@@ -235,69 +235,69 @@
         </div>
       </section>
       <section id="hobbies">
-        <h3>Hobbik</h3>
+        <h3 data-label="hobbies">...</h3>
         <div class="main-hobbies-container">
           <div class="main-image-card-container">
             <div class="main-image-card main-card-flippable up">
-              <img src="cooking.png" alt="A table full of food materials and plates.">
+              <img src="resources/cooking.png" alt="A table full of food materials and plates.">
               <div class="main-card-handle"></div>
             </div>
             <div class="main-image-card main-image-card-back main-card-flippable down">
               <small>
-                <strong>Főzés</strong><br>
-                <q>Kísérletezős szakács vagyok, ritkán főzök recept alapján. Nagyon szeretem a sajtokat.</q>
+                <strong data-label="cooking">...</strong><br>
+                <q data-label="cookingDesc">...</q>
               </small>
               <div class="main-card-handle"></div>
             </div>
           </div>
           <div class="main-image-card-container">
             <div class="main-image-card main-card-flippable up">
-              <img src="psychology.png" alt="People holding hands in the sunset.">
+              <img src="resources/psychology.png" alt="People holding hands in the sunset.">
               <div class="main-card-handle"></div>
             </div>
             <div class="main-image-card main-image-card-back main-card-flippable down">
               <small>
-                <strong>Pszichológia</strong><br>
-                <q>Szeretem az embereket, szeretek megismerni történeteket és gondolkodás- módokat.</q>
+                <strong data-label="psychology">...</strong><br>
+                <q data-label="psychologyDesc">...</q>
               </small>
               <div class="main-card-handle"></div>
             </div>
           </div>
           <div class="main-image-card-container">
             <div class="main-image-card main-card-flippable up">
-              <img src="plants.png" alt="Several room plants on the floor.">
+              <img src="resources/plants.png" alt="Several room plants on the floor.">
               <div class="main-card-handle"></div>
             </div>
             <div class="main-image-card main-image-card-back main-card-flippable down">
               <small>
-                <strong>Növények</strong><br>
-                <q>Számos szoba- és fűszernövény gazdája vagyok. Szeretem a zöld színt, és gondoskodni róluk.</q>
+                <strong data-label="plants">...</strong><br>
+                <q data-label="plantsDesc">...</q>
               </small>
               <div class="main-card-handle"></div>
             </div>
           </div>
           <div class="main-image-card-container">
             <div class="main-image-card main-card-flippable up">
-              <img src="arts.png" alt="René Magritte: La condition humaine.">
+              <img src="resources/arts.png" alt="René Magritte: La condition humaine.">
               <div class="main-card-handle"></div>
             </div>
             <div class="main-image-card main-image-card-back main-card-flippable down">
               <small>
-                <strong>Művészetek</strong><br>
-                <q>Kedvencem a modern és hétköznapi művészet: dizájner ruhadarabok, érdekes graffity-k, zene.</q>
+                <strong data-label="arts">...</strong><br>
+                <q data-label="artsDesc">...</q>
               </small>
               <div class="main-card-handle"></div>
             </div>
           </div>
           <div class="main-image-card-container">
             <div class="main-image-card main-card-flippable up">
-              <img src="dancing.png" alt="Two folk dancers from Kalocsa holding their hands.">
+              <img src="resources/dancing.png" alt="Two folk dancers from Kalocsa holding their hands.">
               <div class="main-card-handle"></div>
             </div>  
             <div class="main-image-card main-image-card-back main-card-flippable down">
               <small>
-                <strong>Tánc</strong><br>
-                <q>15 évig néptáncoltam, de szeretem a zumbát és a társastáncokat is, főleg a rock&rollt.</q>
+                <strong data-label="dance">...</strong><br>
+                <q data-label="danceDesc">...</q>
               </small>
               <div class="main-card-handle"></div>
             </div>

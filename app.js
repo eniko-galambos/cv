@@ -1,3 +1,17 @@
+window.addEventListener("load", function pageLoad() {
+  let elementsWithLabels = Array.from(document.querySelectorAll("[data-label]"));
+
+  fetch("hu/labels.json")
+    .then(function labelsFetched(result) {
+      return result.json();
+    })
+    .then(function labelsJsonCreated(labels) {
+      elementsWithLabels.forEach(function elementsWithLabelsForEach(element) {
+        element.innerText = labels[element.dataset.label];
+      });
+    });
+});
+
 let pageUpperDecor = document.querySelector(".page-upper-decor");
 window.addEventListener("scroll", function bodyScroll() {
   let endPosition = 350;

@@ -1,23 +1,41 @@
-const languages = new Set(["en", "hu"]);
-
-window.addEventListener("load", function pageLoad() {
-  let elementsWithLabels = Array.from(document.querySelectorAll("[data-label]"));
-
-  let browserLanguage = (navigator.language || navigator.userLanguage).slice(0,2);
-  let language = languages.has(browserLanguage) ? browserLanguage : "en";
-
-  fetch(`labels-${language}.json`)
-    .then(function labelsFetched(result) {
-      return result.json();
-    })
-    .then(function labelsJsonCreated(labels) {
-      elementsWithLabels.forEach(function elementsWithLabelsForEach(element) {
-        element.innerText = labels[element.dataset.label];
-      });
-    });
-});
-
+// Elements
+let elementsWithLabels = Array.from(document.querySelectorAll("[data-label]"));
 let pageUpperDecor = document.querySelector(".page-upper-decor");
+let handles = Array.from(document.querySelectorAll(".main-card-handle"));
+
+// Set page language
+const languages = new Set(["en", "hu"]);
+let browserLanguage = (navigator.language || navigator.userLanguage).slice(0,2);
+let urlParamLang = new URLSearchParams(location.search).get("lang");
+
+let pageLanguage = "en";
+
+if(urlParamLang && languages.has(urlParamLang)) {
+  pageLanguage = urlParamLang;
+} else if (languages.has(browserLanguage)) {
+  pageLanguage = browserLanguage;
+}
+
+fetch(`labels-${pageLanguage}.json`)
+  .then(function labelsFetched(result) {
+    return result.json();
+  })
+  .then(function labelsJsonCreated(labels) {
+    elementsWithLabels.forEach(function elementsWithLabelsForEach(element) {
+      element.innerText = labels[element.dataset.label];
+    });
+  });
+
+// Toggle language
+function onLanguageToggleClick() {
+  languages.forEach(function languagesForEach(language) {
+    if(language !== pageLanguage) {
+      location.href = `${location.origin}?lang=${language}`;
+    }
+  });
+}
+
+// Add push animation to page decor
 window.addEventListener("scroll", function bodyScroll() {
   let endPosition = 350;
 
@@ -30,7 +48,7 @@ window.addEventListener("scroll", function bodyScroll() {
   }
 });
 
-let handles = Array.from(document.querySelectorAll(".main-card-handle"));
+// Add animations and chick event to card handles
 handles.forEach(function handlesForEach(handle) {
   handle.addEventListener("mouseover", function handleMouseEnter(event) {
     event.target.parentElement.parentElement.classList.add("shaking");

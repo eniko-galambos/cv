@@ -35,6 +35,11 @@ function onLanguageToggleClick() {
   });
 }
 
+// Open PDF
+function onPdfOpen() {
+  open(`resources/cv-${pageLanguage}.pdf`, '_blank');
+}
+
 // Add push animation to page decor
 window.addEventListener("scroll", function bodyScroll() {
   let endPosition = 350;

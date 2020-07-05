@@ -42,7 +42,7 @@ function onPdfOpen() {
 
 // Add push animation to page decor
 window.addEventListener("scroll", function bodyScroll() {
-  let endPosition = 350;
+  let endPosition = 500;
 
   if(document.body.scrollTop < endPosition && document.documentElement.scrollTop < endPosition) {
     let position = document.documentElement.scrollTop || document.body.scrollTop;

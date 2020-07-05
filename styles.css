@@ -3,10 +3,10 @@
   --header-height: 40px;
   --nav-height: 30px;
   --dark-grey: #213044;
-  --dark-green: #42615A;
-  --dark-salmon: #D66251;
-  --light-salmon: #EB9D84;
-  --light-rose: #F0CFCE;
+  --color-primary: #D66251;
+  --color-secondary: #55827A;
+  --color-decor-darker: #EB9D84;
+  --color-decor-lighter: #F0CFCE;
   --border-radius: 3px;
   --box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   scroll-behavior: smooth;
@@ -16,6 +16,7 @@ body {
   margin: 0;
   color: var(--dark-grey);
   font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
   font-weight: 300;
 }
 
@@ -23,8 +24,19 @@ h1:first-child, h2:first-child {
   margin: 0;
 }
 
+h2 {
+  font-size: 3.9em;
+  font-weight: 200;
+}
+
 h3 {
-  color: var(--dark-salmon);
+  color: var(--color-primary);
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.2em;
 }
 
 .material-icons-outlined {
@@ -36,7 +48,7 @@ ul {
 }
 
 a {
-  color: var(--dark-green);
+  color: var(--color-secondary);
 }
 
 a[href^=mailto]::after {
@@ -76,7 +88,7 @@ em {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--dark-green);
+  background: var(--color-secondary);
   position: absolute;
   left: -25px;
   top: 16px;
@@ -86,7 +98,7 @@ em {
   content: '';
   width: 2px;
   height: 100%;
-  background: var(--dark-green);
+  background: var(--color-secondary);
   position: absolute;
   left: -18px;
   top: 25px;
@@ -116,7 +128,7 @@ header {
   align-items: center;
   padding: 0 15px;
   height: var(--header-height);
-  background-color: var(--dark-salmon);
+  background-color: var(--color-primary);
   box-shadow: var(--box-shadow);
   z-index: 10000;
 }
@@ -128,7 +140,8 @@ header a {
 
 header h1 {
   flex-grow: 2;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -151,9 +164,10 @@ nav {
   padding-left: 15px;
   height: var(--nav-height);
   background-color: whitesmoke;
+  font-size: 1.1em;
   box-shadow: var(--box-shadow);
   z-index: 10000;
-} @media screen and (max-width: 880px) {
+} @media screen and (max-width: 950px) {
   nav {
     justify-content: space-evenly;
     padding-left: 0;
@@ -162,22 +176,22 @@ nav {
 
 nav a {
   color: var(--dark-grey);
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: var(--dark-green);
+  color: var(--color-secondary);
 }
 
 nav a .material-icons-outlined {
   margin-right: 5px;
   font-size: 20px;
-} @media screen and (max-width: 1050px) {
+} @media screen and (max-width: 1230px) {
   nav a .material-icons-outlined {
     display: none;
   }
-} @media screen and (max-width: 880px) {
+} @media screen and (max-width: 950px) {
   nav a .material-icons-outlined {
     display: initial;
   }
@@ -185,7 +199,7 @@ nav a .material-icons-outlined {
 
 nav a .nav-label {
   vertical-align: middle;
-} @media screen and (max-width: 880px) {
+} @media screen and (max-width: 950px) {
   nav a .nav-label {
     display: none;
   }
@@ -195,7 +209,7 @@ nav .nav-vertical-line {
   margin: 0 15px;
   height: 20px;
   border-left: 1px solid rgba(0,0,0,0.1);
-} @media screen and (max-width: 1170px) {
+} @media screen and (max-width: 1060px) {
   nav .nav-vertical-line {
     margin: 0 5px;
   }
@@ -216,20 +230,22 @@ nav .nav-vertical-line {
 }
 
 .page-upper-decor .triangle-right {
-  fill: var(--light-rose);
+  fill: var(--color-decor-lighter);
+  opacity: 60%;
 }
 
 .page-upper-decor .triangle-left {
-  fill: var(--light-salmon);
+  fill: var(--color-decor-darker);
+  opacity: 60%;
 }
 
 /* Main content */
 main {
-  margin: calc(var(--header-height) + var(--nav-height) + 20px) auto 20px auto;
+  margin: calc(var(--header-height) + var(--nav-height) + 80px) auto 20px auto;
   padding: 0 10px;
-  width: 720px;
+  width: 780px;
   z-index: 20;
-} @media screen and (max-width: 720px) {
+} @media screen and (max-width: 780px) {
   main {
     width: auto;
   }
@@ -247,7 +263,7 @@ article {
 main .main-card {
   margin-bottom: 5px;
   padding: 15px;
-  width: 400px;
+  width: 450px;
   background: linear-gradient(white, white 60%, whitesmoke 120%);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -274,14 +290,18 @@ main .main-card-flippable .main-card-handle {
 }
 
 main .main-image-card-container {
-  flex-basis: 120px;
+  flex-basis: 130px;
   position: relative;
   margin: 0 8px 15px 8px;
 }
 
 main .main-image-card {
-  margin: 20px auto;
-  max-width: 250px;
+  margin: 50px auto;
+  max-width: 300px;
+} @media screen and (max-width: 600px) {
+  main .main-image-card {
+    margin: 0 auto;
+  }
 }
 main .main-image-card img {
   max-width: 100%;
@@ -299,6 +319,9 @@ main .main-image-card.main-image-card-back {
   line-height: 1;
   background: linear-gradient(white, white 60%, whitesmoke 120%);
   box-shadow: var(--box-shadow);
+}
+main .main-image-card.main-image-card-back q {
+  margin-top: 3px;
 }
 
 main .main-personal-details-container address ul {

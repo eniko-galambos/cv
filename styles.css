@@ -3,10 +3,10 @@
   --header-height: 40px;
   --nav-height: 30px;
   --dark-grey: #213044;
-  --color-primary: #D66251;
-  --color-secondary: #55827A;
-  --color-decor-darker: #EB9D84;
-  --color-decor-lighter: #F0CFCE;
+  --color-primary: #D55C5A;
+  --color-secondary: #DDCFA7;
+  --color-decor-darker: #486666;
+  --color-decor-lighter: #B5C7C4;
   --border-radius: 3px;
   --box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   scroll-behavior: smooth;
@@ -101,7 +101,7 @@ em {
   background: var(--color-secondary);
   position: absolute;
   left: -18px;
-  top: 25px;
+  top: 30px;
 }
 
 .shaking {
@@ -261,7 +261,7 @@ article {
 }
 
 main .main-card {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding: 15px;
   width: 450px;
   background: linear-gradient(white, white 60%, whitesmoke 120%);

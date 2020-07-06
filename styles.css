@@ -314,7 +314,7 @@ main .main-card {
   background: linear-gradient(white, white 60%, whitesmoke 120%);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-} @media screen and (max-width: 500px) {
+} @media screen and (max-width: 600px) {
   main .main-card {
     width: 90%;
   }

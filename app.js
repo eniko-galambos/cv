@@ -46,12 +46,14 @@ window.addEventListener("scroll", function bodyScroll() {
   let bodyScrollTop = document.body.scrollTop;
   let documentElementScrollTop = document.documentElement.scrollTop;
 
-  if(bodyScrollTop < endPosition && documentElementScrollTop < endPosition) {
-    let position = documentElementScrollTop || document.body.scrollTop;
-    let percent = position / endPosition;
-    pageUpperDecor.style.transform = `scaleY(${1 - percent})`;
-  } else {
-    pageUpperDecor.style.transform = `scaleY(0)`;
+  if(window.innerWidth > 600) {
+    if(bodyScrollTop < endPosition && documentElementScrollTop < endPosition) {
+      let position = documentElementScrollTop || document.body.scrollTop;
+      let percent = position / endPosition;
+      pageUpperDecor.style.transform = `scaleY(${1 - percent})`;
+    } else {
+      pageUpperDecor.style.transform = `scaleY(0)`;
+    }
   }
 });
 

@@ -43,9 +43,11 @@ function onPdfOpen() {
 // Add push animation to page decor
 window.addEventListener("scroll", function bodyScroll() {
   let endPosition = 500;
+  let bodyScrollTop = document.body.scrollTop;
+  let documentElementScrollTop = document.documentElement.scrollTop;
 
-  if(document.body.scrollTop < endPosition && document.documentElement.scrollTop < endPosition) {
-    let position = document.documentElement.scrollTop || document.body.scrollTop;
+  if(bodyScrollTop < endPosition && documentElementScrollTop < endPosition) {
+    let position = documentElementScrollTop || document.body.scrollTop;
     let percent = position / endPosition;
     pageUpperDecor.style.transform = `scaleY(${1 - percent})`;
   } else {

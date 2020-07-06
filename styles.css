@@ -1,7 +1,7 @@
 /* Basic */
 :root {
   --header-height: 40px;
-  --nav-height: 30px;
+  --nav-height: 35px;
   --dark-grey: #213044;
   --color-primary: #D55C5A;
   --color-secondary: #DDCFA7;
@@ -18,6 +18,10 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.1em;
   font-weight: 300;
+} @media screen and (max-width: 600px) {
+  body {
+    font-size: 1em;
+  }
 }
 
 h1:first-child {
@@ -28,6 +32,11 @@ h2 {
   margin-top: 10px;
   font-size: 3.9em;
   font-weight: 200;
+} @media screen and (max-width: 600px) {
+  h2 {
+    margin-top: 0;
+    font-size: 2.2em;
+  }
 }
 h2:first-child {
   margin-bottom: 0;
@@ -37,10 +46,18 @@ h3 {
   color: var(--color-primary);
   font-size: 1.8em;
   font-weight: 400;
+} @media screen and (max-width: 600px) {
+  h3 {
+    font-size: 1.2em;
+  }
 }
 
 h4 {
   font-size: 1.2em;
+} @media screen and (max-width: 600px) {
+  h4 {
+    font-size: 1.1em;
+  }
 }
 
 .material-icons-outlined {
@@ -49,6 +66,10 @@ h4 {
 
 section {
   margin-top: 10px;
+} @media screen and (max-width: 600px) {
+  section {
+    margin-top: 0;
+  }
 }
 
 ul {
@@ -183,7 +204,7 @@ nav {
   font-size: 1.1em;
   box-shadow: var(--box-shadow);
   z-index: 10000;
-} @media screen and (max-width: 950px) {
+} @media screen and (max-width: 1020px) {
   nav {
     justify-content: space-evenly;
     padding-left: 0;
@@ -194,6 +215,7 @@ nav a {
   color: var(--dark-grey);
   font-weight: 300;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -203,19 +225,20 @@ nav a:hover {
 nav a .material-icons-outlined {
   margin-right: 5px;
   font-size: 20px;
-} @media screen and (max-width: 1230px) {
+} @media screen and (max-width: 1300px) {
   nav a .material-icons-outlined {
     display: none;
   }
-} @media screen and (max-width: 950px) {
+} @media screen and (max-width: 1020px) {
   nav a .material-icons-outlined {
     display: initial;
+    margin-right: 0;
   }
 }
 
 nav a .nav-label {
   vertical-align: middle;
-} @media screen and (max-width: 950px) {
+} @media screen and (max-width: 1020px) {
   nav a .nav-label {
     display: none;
   }
@@ -225,7 +248,7 @@ nav .nav-vertical-line {
   margin: 0 15px;
   height: 20px;
   border-left: 1px solid rgba(0,0,0,0.1);
-} @media screen and (max-width: 1060px) {
+} @media screen and (max-width: 1150px) {
   nav .nav-vertical-line {
     margin: 0 5px;
   }
@@ -243,6 +266,10 @@ nav .nav-vertical-line {
 
 .page-upper-decor svg {
   filter: drop-shadow( 1px 1px 15px rgba(0, 0, 0, .2));
+} @media screen and (max-width: 600px) {
+  .page-upper-decor svg {
+    height: 250px;
+  }
 }
 
 .page-upper-decor .triangle-right {
@@ -264,6 +291,10 @@ main {
 } @media screen and (max-width: 820px) {
   main {
     width: auto;
+  }
+} @media screen and (max-width: 600px) {
+  main {
+    margin: calc(var(--header-height) + var(--nav-height) + 30px) auto 0 auto;
   }
 }
 
@@ -309,6 +340,10 @@ main .main-image-card-container {
   flex-basis: 140px;
   position: relative;
   margin: 0 8px 15px 8px;
+} @media screen and (max-width: 600px) {
+  main .main-image-card-container {
+    flex-basis: 120px;
+  }
 }
 
 main .main-image-card {
@@ -317,6 +352,7 @@ main .main-image-card {
 } @media screen and (max-width: 600px) {
   main .main-image-card {
     margin: 0 auto;
+    max-width: 200px;
   }
 }
 main .main-image-card img {

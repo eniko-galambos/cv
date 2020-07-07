@@ -155,6 +155,10 @@ em {
   visibility: hidden;
 }
 
+[data-label]:empty::before {
+  content: "-";
+}
+
 /* Header */
 header {
   position: fixed;

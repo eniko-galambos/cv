@@ -30,7 +30,7 @@ fetch(`labels-${pageLanguage}.json`)
 function onLanguageToggleClick() {
   languages.forEach(function languagesForEach(language) {
     if(language !== pageLanguage) {
-      location.href = `${location.origin}?lang=${language}`;
+      location.href = `${location.origin}${location.pathname}?lang=${language}`;
     }
   });
 }
